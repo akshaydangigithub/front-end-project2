@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* -------- cursor design --------- */
+.cursor {
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 99;
+    transition: all ease .1s;
+}
+
+/* -------- End cursor design --------- */
+
+/* -------- menu design --------- */
+.menu {
+    position: absolute;
+    z-index: 9999;
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    background-color: #1F1F1F;
+    /* display: flex; */
+    display: none;
+}
+
+.menu-left {
+    height: 100vh;
+    width: 33%;
+}
+
+.menu-right {
+    height: 100vh;
+    width: 67%;
+    position: relative;
+}
+
+.close {
+    height: 100%;
+    width: 100%;
+    background-color: #919598;
+    /* height: 10%; */
+    position: absolute;
+    bottom: 0%;
+}
+
+.close-elem {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.close-elem span {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.close-elem span h1 {
+    font-size: 200px;
+    color: #1F1F1F;
+    font-weight: 500;
+    /* margin-top: 42vh; */
+}
+
+.circle1 {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #1F1F1F;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle2 {
+    height: 60%;
+    width: 60%;
+    background-color: #919598;
+    border-radius: 50%;
+    transition: all ease .3s;
+}
+
+.circle3 {
+    background-color: #EBEAE4;
+    height: 60%;
+    width: 60%;
+}
+
+.close-elem:hover .circle2 {
+    height: 0%;
+    width: 0%;
+}
+
+.about-main {
+    height: 23.1vh;
+    width: 50%;
+    background-color: #EBEAE4;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.about,
+.blogs,
+.contact {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    cursor: pointer;
+}
+
+.about h1,
+.blogs h1,
+.contact h1 {
+    color: #1F1F1F;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.contact:hover .circle3 {
+    height: 0%;
+    width: 0%;
+}
+
+.about:hover .circle3 {
+    height: 0%;
+    width: 0%;
+}
+
+.blogs:hover .circle3 {
+    height: 0%;
+    width: 0%;
+}
+
+.blogs-main {
+    height: 23.1vh;
+    width: 100%;
+    background-color: #EBEAE4;
+    margin-left: auto;
+}
+
+.contact-main {
+    position: absolute;
+    bottom: 0%;
+    height: 23.1vh;
+    width: 100%;
+    right: 0%;
+    background-color: #EBEAE4;
+}
+
+/* -------- End menu design --------- */
+
+
+#main {
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+
+nav {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 9;
+    background-color: black;
+}
+
+nav h1 {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.parent3 {
+    position: relative;
+    overflow: hidden;
+    height: 24px;
+    margin-top: 20px;
+}
+
+.parent3 .child3 {
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+}
+
+.section1-main {
+    height: calc(100vh - 59px);
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    position: relative;
+}
+
+#loader {
+    position: absolute;
+    height: 100vh;
+    width: 0%;
+    background-color: #A3A3A3;
+    z-index: 9999;
+    right: 0%;
+}
+
+.section1-main>span {
+    position: absolute;
+    bottom: 3%;
+    display: inline-block;
+    height: 170px;
+    overflow: hidden;
+}
+
+.section1-main span h1 {
+    font-size: 150px;
+    color: #A3A3A3;
+}
+
+
+.section1 {
+    height: calc(100vh - 59px);
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    right: 0%;
+    z-index: 10;
+}
+
+
+.section1 .text {
+    position: absolute;
+    top: 13%;
+    left: 3%;
+    line-height: 1;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.parent {
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.child h1 {
+    font-size: 150px;
+    color: #A3A3A3;
+    z-index: 9999;
+}
+
+#word2 {
+    margin-left: 150px;
+}
+
+.parent2 {
+    position: relative;
+    overflow: hidden;
+    height: 22px;
+    margin-top: 20px;
+    /* background-color: red; */
+}
+
+.parent2 .child2 {
+    /* margin-top: -22px; */
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+}
+
+.section1-info {
+    text-align: right;
+    padding: 0 50px;
+    position: absolute;
+    top: 65%;
+    right: 0%;
+}
+
+.section1-btm-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    z-index: -1;
+}
+
+.section1-btm-nav h4 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.section1-btm-nav h4::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1.5px;
+    background-color: #fff;
+    bottom: 0%;
+    transition: all ease .5s;
+}
+
+
+.section1-btm-nav h4>p {
+    transform: rotate(-30deg);
+    margin-left: 5px;
+    transition: all ease .2s;
+}
+
+.section1-btm-nav h4:hover::after {
+    width: 100%;
+}
+
+.section1-btm-nav h4:hover p {
+    transform: rotate(0deg);
+}
+
+.section1-btm-nav>p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #A3A3A3;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    gap: 22px;
+    transition: all ease .4s;
+}
+
+.section1-btm-nav>p i {
+    color: black;
+    font-weight: bolder;
+    transition: all ease .4s;
+}
+
+
+.section1-btm-nav>p i:nth-last-child(1) {
+    color: black;
+    font-weight: bolder;
+    margin-bottom: 40px;
+    transition: all ease .4s;
+}
+
+.section1-btm-nav>p:hover i:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.section1-btm-nav>p:hover i:nth-last-child(2) {
+    margin-top: 40px;
+}
+
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    padding-left: 40px;
+    padding-right: 100px;
+}
+
+.section2 .image-div {
+    height: 28vh;
+    width: 100%;
+    background-color: black;
+    border-top: 1px solid white;
+    border-bottom: .05px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.section2 .image-div h1 {
+    font-size: 120px;
+    color: #A3A3A3;
+}
+
+.section2 .image-div h5 {
+    font-size: 16px;
+    transition: all ease .5s;
+}
+
+.section2 .image-div .image {
+    position: absolute;
+    height: 350px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+}
+
+.section2 .image-div .image img {
+    height: 100%;
+    width: 100%;
+    scale: 0;
+    object-fit: cover;
+    transition: all linear .3s;
+}
+
+.section3 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    padding-right: 180px;
+    margin-top: -1px;
+
+}
+
+.info-main {
+    display: flex;
+    /* background-color: red; */
+    height: 80%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-photo {
+    height: 27vh;
+    overflow: hidden;
+    margin-right: 80px;
+    margin-top: -60px;
+}
+
+.profile-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info {
+    width: 40%;
+}
+
+.info h4 {
+    font-size: .9rem;
+    color: #A3A3A3;
+    margin-bottom: 10px;
+}
+
+.info h3 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.info button {
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    padding: 6px 25px;
+    border-radius: 100px;
+    font-weight: 300;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.info button::after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 100%;
+    background-color: white;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    left: 0%;
+    bottom: 0%;
+    z-index: -1;
+    transition: all ease .15s;
+}
+
+.info button:hover::after {
+    height: 120%;
+}
+
+.info button:hover {
+    color: black;
+}
+
+.info-btm {
+    padding-left: 30px;
+}
+
+.info-btm h3 {
+    font-size: .9rem;
+    color: #919598;
+    margin-bottom: 5px;
+}
+
+.info-btm h2 {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.info-btm h2::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1.5px;
+    background-color: #fff;
+    bottom: 0%;
+    transition: all ease .5s;
+}
+
+.info-btm h2>p {
+    transform: rotate(-30deg);
+    margin-left: 5px;
+    transition: all ease .2s;
+}
+
+.info-btm h2:hover::after {
+    width: 100%;
+}
+
+.info-btm h2:hover p {
+    transform: rotate(0deg);
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin-top: -1px;
+    height: 60px;
+}
+
+footer h3 {
+    font-size: .9rem;
+}
+
+footer .prt1 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+footer .prt2 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+footer .prt2 h3 {
+    position: relative;
+    cursor: pointer;
+}
+
+footer .prt2 h3::after {
+    position: absolute;
+    content: "";
+    height: 1.3px;
+    width: 0%;
+    bottom: 0%;
+    left: 0%;
+    background-color: #fff;
+    transition: all ease .3s;
+
+}
+
+footer .prt2 h3:hover::after {
+    width: 100%;
+}
